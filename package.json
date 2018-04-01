@@ -1,0 +1,19 @@
+{
+  "name": "arms-lib-eslint",
+  "version": "0.0.4",
+  "description": "自定义的 js 编码规范",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grARM/arms-lib-eslint.git"
+  },
+  "author": "grarm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grARM/arms-lib-eslint/issues"
+  },
+  "homepage": "https://github.com/grARM/arms-lib-eslint#readme"
+}
