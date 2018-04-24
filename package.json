@@ -1,6 +1,6 @@
 {
-  "name": "arms-lib-eslint",
-  "version": "0.0.4",
+  "name": "eslint-config-arms",
+  "version": "0.0.1",
   "description": "自定义的 js 编码规范",
   "main": "index.js",
   "scripts": {

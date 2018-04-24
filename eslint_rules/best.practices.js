@@ -367,5 +367,5 @@ module.exports = {
   // {@link https://eslint.org/docs/rules/yoda}
   // {@link http://eslint.cn/docs/rules/yoda}
   // [fixed]
-  "yoda": "off"
+  "yoda": "off",
 }

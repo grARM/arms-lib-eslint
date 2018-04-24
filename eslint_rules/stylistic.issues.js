@@ -228,7 +228,7 @@ module.exports = {
   // {@link https://eslint.org/docs/rules/multiline-ternary}
   // {@link http://eslint.cn/docs/rules/multiline-ternary}
   // ruiguo: 三元表达式就是为了简洁处理条件分支，如果逻辑复杂就应该用if-else
-  "multiline-ternary": "off",
+  "multiline-ternary": ["error", "never"],
   // require constructor names to begin with a capital letter
   // 要求构造函数首字母大写
   // {@link https://eslint.org/docs/rules/new-cap}
@@ -246,7 +246,7 @@ module.exports = {
   // {@link http://eslint.cn/docs/rules/newline-per-chained-call}
   // [fixed]
   // ruiguo: 默认允许在同一行成链的深度为2。我建议为3
-  "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 3 }],
+  "newline-per-chained-call": "off",
   // disallow Array constructors
   // 禁用 Array 构造函数
   // {@link https://eslint.org/docs/rules/no-array-constructor}
@@ -256,7 +256,7 @@ module.exports = {
   // 禁用按位运算符
   // {@link https://eslint.org/docs/rules/no-bitwise}
   // {@link http://eslint.cn/docs/rules/no-bitwise}
-  "no-bitwise": "error",
+  "no-bitwise": "off",
   // disallow continue statements
   // 禁用 continue 语句
   // {@link https://eslint.org/docs/rules/no-continue}
@@ -273,12 +273,12 @@ module.exports = {
   // {@link https://eslint.org/docs/rules/no-lonely-if}
   // {@link http://eslint.cn/docs/rules/no-lonely-if}
   // [fixed]
-  "no-lonely-if": "warn",
+  "no-lonely-if": "error",
   // disallow mixed binary operators
   // 禁止混合使用不同的操作符
   // {@link https://eslint.org/docs/rules/no-mixed-operators}
   // {@link http://eslint.cn/docs/rules/no-mixed-operators}
-  "no-mixed-operators": "off",
+  "no-mixed-operators": "error",
   // disallow mixed spaces and tabs for indentation
   // 禁止空格和 tab 的混合缩进
   // {@link https://eslint.org/docs/rules/no-mixed-spaces-and-tabs}
@@ -327,7 +327,7 @@ module.exports = {
   // 一些风格指南根本不允许使用制表符
   // {@link https://eslint.org/docs/rules/no-tabs}
   // {@link http://eslint.cn/docs/rules/no-tabs}
-  "no-tabs": "off",
+  "no-tabs": "error",
   // disallow ternary operators
   // 禁用三元操作符
   // {@link https://eslint.org/docs/rules/no-ternary}
@@ -338,7 +338,7 @@ module.exports = {
   // {@link https://eslint.org/docs/rules/no-trailing-spaces}
   // {@link http://eslint.cn/docs/rules/no-trailing-spaces}
   // [fixed]
-  "no-trailing-spaces": "warn",
+  "no-trailing-spaces": ["error", { "ignoreComments": true }],
   // disallow dangling underscores in identifiers
   // 禁止标识符中有悬空下划线
   // {@link https://eslint.org/docs/rules/no-underscore-dangle}
@@ -363,14 +363,14 @@ module.exports = {
   // {@link http://eslint.cn/docs/rules/nonblock-statement-body-position}
   // [fixed]
   // ruiguo: 一旦逻辑语句中有单行语句，那么就要建议放在下一行，避免条件过长时的歧义
-  "nonblock-statement-body-position": ["error", "below"],
+  "nonblock-statement-body-position": "off",
   // enforce consistent line breaks inside braces
   // 强制大括号内换行符的一致性
   // {@link https://eslint.org/docs/rules/object-curly-newline}
   // {@link http://eslint.cn/docs/rules/object-curly-newline}
   // [fixed]
   // 默认选项 { "multiline": true } 如果在属性内部或属性之间有换行符，就要求有换行符
-  "object-curly-newline": "error",
+  "object-curly-newline": ["error", { "multiline": true }],
   // enforce consistent spacing inside braces
   // 强制在大括号中使用一致的空格
   // {@link https://eslint.org/docs/rules/object-curly-spacing}
@@ -403,7 +403,7 @@ module.exports = {
   // {@link http://eslint.cn/docs/rules/operator-assignment}
   // [fixed]
   // ruiguo: 这里建议弱提示
-  "operator-assignment": "warn",
+  "operator-assignment": "off",
   // enforce consistent linebreak style for operators
   // 强制操作符使用一致的换行符
   // {@link https://eslint.org/docs/rules/operator-linebreak}
@@ -415,12 +415,12 @@ module.exports = {
   // {@link https://eslint.org/docs/rules/padded-blocks}
   // {@link http://eslint.cn/docs/rules/padded-blocks}
   // [fixed]
-  "padded-blocks": ["error", "never"],
+  "padded-blocks": "off",
   // require or disallow padding lines between statements
   // {@link https://eslint.org/docs/rules/padding-line-between-statements}
   // {@link http://eslint.cn/docs/rules/padding-line-between-statements}
   // [fixed]
-  "padding-line-between-statements": ["error", { "blankLine": "always", "prev": "*", "next": "return" }],
+  "padding-line-between-statements": "off",
   // require quotes around object literal property names
   // 要求对象字面量属性名称用引号括起来
   // {@link https://eslint.org/docs/rules/quote-props}
@@ -446,7 +446,7 @@ module.exports = {
       }
   }],
   // require or disallow semicolons instead of ASI
-  // 要求或禁止使用分号代替 ASI 
+  // 要求或禁止使用分号代替 ASI
   // {@link https://eslint.org/docs/rules/semi}
   // {@link http://eslint.cn/docs/rules/semi}
   // [fixed]
@@ -458,7 +458,7 @@ module.exports = {
   // {@link http://eslint.cn/docs/rules/semi-spacing}
   // [fixed]
   // ruiguo: 遇到过;(async () => { 的书写
-  "semi-spacing": ["error", {"before": false, "after": true}],
+  "semi-spacing": ["error", {"before": false, "after": false}],
   // enforce location of semicolons
   // 强制分号的位置
   // {@link https://eslint.org/docs/rules/semi-style}
@@ -490,7 +490,7 @@ module.exports = {
   // {@link https://eslint.org/docs/rules/space-before-function-paren}
   // {@link http://eslint.cn/docs/rules/space-before-function-paren}
   // [fixed]
-  "space-before-function-paren": "error",
+  "space-before-function-paren": ["error", {"anonymous": "always", "named": "never", "asyncArrow": "always"}],
   // enforce consistent spacing inside parentheses
   // 强制在圆括号内使用一致的空格
   // {@link https://eslint.org/docs/rules/space-in-parens}
@@ -514,7 +514,7 @@ module.exports = {
   // {@link https://eslint.org/docs/rules/spaced-comment}
   // {@link http://eslint.cn/docs/rules/spaced-comment}
   // [fixed]
-  "spaced-comment": ["error", "always"],
+  "spaced-comment": "off",
   // enforce spacing around colons of switch statements
   // 强制执行switch语句的冒号间隔
   // {@link https://eslint.org/docs/rules/switch-colon-spacing}
@@ -527,17 +527,17 @@ module.exports = {
   // {@link http://eslint.cn/docs/rules/template-tag-spacing}
   // [fixed]
   // ruiguo 为了可读性建议开启
-  "template-tag-spacing": ["error", "always"],
+  "template-tag-spacing": "off",
   // require or disallow Unicode byte order mark (BOM)
   // 要求或禁止 Unicode 字节顺序标记 (BOM)
   // {@link https://eslint.org/docs/rules/unicode-bom}
   // {@link http://eslint.cn/docs/rules/unicode-bom}
   // [fixed]
-  "unicode-bom": "error",
+  "unicode-bom": "off",
   // require parenthesis around regex literals
   // 要求正则表达式被括号括起来
   // {@link https://eslint.org/docs/rules/wrap-regex}
   // {@link http://eslint.cn/docs/rules/wrap-regex}
   // [fixed]
-  "wrap-regex": "error",
+  "wrap-regex": "off",
 }
